@@ -18,6 +18,7 @@ function Signup(){
         setError("")
         try {
             const userData = await authService.createAccount(data)
+            console.log("signUp.jsx userData", userData);
 
             if(userData){
                 const currentUserData = await authService.getCurrentUser()

@@ -14,6 +14,7 @@ export default function Post(){
 
     const isAuthor = post && userData ? post.userId === userData.$id : false;
 
+
     useEffect(()=>{
         if(slug){
             service.getPost(slug).then((post)=>{
@@ -39,7 +40,7 @@ export default function Post(){
                 <img
                     src={service.getFilePreview(post.featuredImage)}
                     alt={post.title}
-                    className="rounded-xl"
+                    className="w-full h-[440px] object-contain rounded-xl"
                 />
 
                 {isAuthor && (

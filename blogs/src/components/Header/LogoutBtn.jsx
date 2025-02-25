@@ -9,6 +9,8 @@ function LogoutBtn(){
 
     const logoutHandler= ()=>{
         authService.logout().then(()=>{
+        console.log("Logoutbtn.jsx, logging out")
+
             dispatch(logout())
         })
     }

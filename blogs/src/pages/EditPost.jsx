@@ -5,7 +5,7 @@ import { Container, PostForm } from "../components";
 
 
 export default function EditPost(){
-    const [post, setPost] = useState();
+    const [post, setPost] = useState(null);
     const {slug} = useParams();
     const navigate = useNavigate();
 
